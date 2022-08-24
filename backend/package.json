@@ -1,0 +1,22 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Groupmanina.com chapter 07 project ",
+  "main": "server.js",
+  "dependencies": {
+    "detect-libc": "^1.0.3",
+    "mime": "^1.6.0",
+    "mkdirp": "^1.0.4",
+    "multer": "^1.4.3",
+    "nopt": "^5.0.0",
+    "rimraf": "^3.0.2",
+    "semver": "^7.3.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "J",
+  "license": "ISC"
+}
