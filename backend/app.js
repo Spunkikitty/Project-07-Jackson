@@ -48,7 +48,7 @@ process.on('uncaughtException', (error, origin) => {
   
   //MIDDLEWARE  allows all requests from all origins to access the api
   app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', '*');
+    res.setHeader('Access-Control-Allow-Origin', 'https://www.Groupmainia.com');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
@@ -60,6 +60,7 @@ process.on('uncaughtException', (error, origin) => {
   
   //serving static resource images 
   app.use('/images', express.static(path.join(__dirname, 'images')));
+  
   //using routes, setting the endpoint 
   app.use('/api/sauces', sauceRoutes)
   app.use('/api/stuff', stuffRoutes);
