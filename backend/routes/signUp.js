@@ -1,9 +1,9 @@
 const express = require('express');
 const router = express.Router();
 
-const userCtrl = require('../controllers/userReg');
+const userCtrl = require('../controllers/signUp');
 
-fetch('https://www.Groupmainia.com')
+fetch('https//localhost:3000/api/signUp')
   .then(data => {
       if (!data.ok) {
         throw Error(data.status);
@@ -11,7 +11,6 @@ fetch('https://www.Groupmainia.com')
        return data.json();
       }).then(update => {
       console.log(update);
-      
       }).catch(e => {
       console.log(e);
       });
