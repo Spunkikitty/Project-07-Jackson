@@ -1,12 +1,3 @@
 
-//frontend must be Vue, or React
+//frontend must be Vue, 
 
-
-fetch('http://localhost:3000/api/signup'), {
-    method:'Post',
-    headers: {
-        'Content-type': 'application/json',
-   
-
-    }
-}

@@ -29,7 +29,7 @@ process.on('uncaughtException', (error, origin) => {
   const stuffRoutes = require('./routes/stuff');
   const userRoutes = require('./routes/user');
   const sauceRoutes = require('./routes/sauce');
-  const signUpRoutes = require('./routes/signUp');
+  const signUp = require('./routes/signUp');
   
   
   
@@ -69,6 +69,7 @@ process.on('uncaughtException', (error, origin) => {
   app.use('/api/sauces', sauceRoutes)
   app.use('/api/stuff', stuffRoutes);
   app.use('/api/auth', userRoutes);
-  app.use('/api/signUp',signUpRoutes);
+  app.use('/api/signUp', signUpRoutes);
+  
     
   module.exports = app;

@@ -2,7 +2,8 @@ const bcrypt =require('bcrypt');
 const jwt =require('jsonwebtoken');
 const User = require('../models/signUp');
 
-fetch('http://www.localhost:3000/api/signup')
+fetch('https://localhost:3000/api/signUp')
+
 
     exports.signup = (req, res, next) => {
         bcrypt.hash(req.body.password, 10).then(
@@ -28,7 +29,6 @@ fetch('http://www.localhost:3000/api/signup')
         );
       };
 
-      fetch('http://www.localhost:3000/') 
 
 exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email }).then(
