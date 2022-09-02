@@ -21,6 +21,9 @@ process.on('uncaughtException', (error, origin) => {
   const bodyParser = require('body-parser');
   const mongoose = require ('mongoose');
   const path = require('path');
+
+
+
   
   //import routes
   const stuffRoutes = require('./routes/stuff');
@@ -48,7 +51,7 @@ process.on('uncaughtException', (error, origin) => {
   
   //MIDDLEWARE  allows all requests from all origins to access the api
   app.use((req, res, next) => {
-    res.setHeader('Access-Control-Allow-Origin', 'https://www.Groupmainia.com');
+    res.setHeader('Access-Control-Allow-Origin', '*');
     res.setHeader('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content, Accept, Content-Type, Authorization');
     res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, PATCH, OPTIONS');
     next();
