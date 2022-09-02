@@ -28,7 +28,7 @@ fetch('http://www.localhost:3000/api/signup')
         );
       };
 
-      fetch('http://www.localhost:3000/api/login')
+      fetch('http://www.localhost:3000/') 
 
 exports.login = (req, res, next) => {
     User.findOne({ email: req.body.email }).then(
